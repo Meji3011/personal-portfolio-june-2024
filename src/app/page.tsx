@@ -279,13 +279,16 @@ export default function Home() {
               </div>
 
               <div className="items-center mt-4 md:col-start-3 mx-auto">
-                <div>
+                <div className="relative w-full">
                   <Image
                     src="/TangAboutMe.jpg"
-                    width={400}
-                    height={400}
                     alt="Picture of Ryan for About me section."
-                  ></Image>
+                    width={1365}
+                    height={2048}
+                    layout="responsive"
+                    objectFit="contain"
+                    className="rounded-lg"
+                  />
                 </div>
               </div>
             </div>
@@ -423,9 +426,7 @@ export default function Home() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>
-                        Tesla clone with login functionality
-                      </p>
+                      <p>Tesla clone with login functionality</p>
                       <p>React, Firebase, Auth</p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">

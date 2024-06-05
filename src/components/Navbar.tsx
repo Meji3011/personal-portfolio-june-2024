@@ -5,9 +5,9 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = async () => {
   return (
-    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex h-[10vh] overflow-hidden">
+    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex h-[10vh] min-h-20 overflow-hidden">
       <MaxWidthWrapper>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between p-4 sm:p-0">
           <Link
             href="/"
             className={buttonVariants({
@@ -15,7 +15,7 @@ const Navbar = async () => {
               variant: "ghost",
             })}
           >
-            <span className="font-bold text-2xl">
+            <span className="text-xl font-bold sm:text-2xl">
               Guangran (<span className="text-[#1f88ff]">Ryan</span>) Tang
             </span>
           </Link>
