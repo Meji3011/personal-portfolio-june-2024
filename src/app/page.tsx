@@ -1,3 +1,5 @@
+"use client";
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,21 +11,88 @@ import {
 } from "@/components/ui/carousel";
 import { Github, Linkedin, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const emailService = process.env.EMAIL_SERVICE || "";
+  const emailTemplate = process.env.EMAIL_TEMPLATE || "";
+  const emailUser = process.env.EMAIL_USER || "";
+
+  const emailRef = useRef();
+  const subjectRef = useRef();
+  const nameRef = useRef();
+  const messageRef = useRef();
+  const sendMessage = (e) => {
+    e.preventDefault();
+    const templateParams = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      subject: subjectRef.current.value,
+      message: messageRef.current.value,
+    };
+    emailjs.send(emailService, emailTemplate, templateParams, emailUser).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Thanks, message sent successfully");
+      },
+      function (error) {
+        alert("OOPs something went wrong... Try again later");
+        console.log("FAILED...", error);
+      }
+    );
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    subjectRef.current.value = "";
+    messageRef.current.value = "";
+  };
+
   return (
     <>
       <section id="Landing">
         <MaxWidthWrapper className="mt-32 px-8 min-h-[90vh]">
-          <div className="flex flex-col items-start text-left gap-6 bg-slate-400 py-20 px-12 rounded-lg">
-            <p className="font-foreground-muted text-xl">Hi, My name is</p>
-            <h1 className="tracking-tight text-balance font-bold text-4xl sm:text-6xl">
-              Guangran (<span className="text-[#1F51FF]">Ryan</span>) Tang.
+          <div
+            className="flex flex-col items-start text-left gap-6 bg-gradient-to-r from-slate-600 to bg-slate-300 text-clip py-20 px-12 rounded-lg"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="700"
+          >
+            <p
+              className="font-semibold text-xl text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-100"
+              data-aos="fade-up"
+              data-aos-delay="900"
+              data-aos-duration="700"
+            >
+              Hi! My name is
+            </p>
+            <h1
+              className="tracking-tight text-balance font-bold text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200 sm:py-4"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+              data-aos-duration="700"
+            >
+              Guangran (<span className="text-[#1f50ff]">Ryan</span>) Tang.
             </h1>
-            <h2 className="tracking-tight text-balance font-bold text-2xl sm:text-4xl">
+            <h2
+              className="tracking-tight text-balance font-bold text-2xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200"
+              data-aos="fade-up"
+              data-aos-delay="1200"
+              data-aos-duration="700"
+            >
               I'm a Freelance Frontend Developer.
             </h2>
-            <p className="text-xl">
+            <p
+              className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-100"
+              data-aos="fade-up"
+              data-aos-delay="1400"
+              data-aos-duration="700"
+            >
               I love the challenge of turning beautiful concepts into reality.
             </p>
             <div className="flex justify-center items-center gap-2">
@@ -31,6 +100,9 @@ export default function Home() {
                 asChild
                 variant="ghost"
                 className="hover:scale-110 transition duration-300"
+                data-aos="fade-left"
+                data-aos-delay="1600"
+                data-aos-duration="700"
               >
                 <a
                   href="https://www.linkedin.com/in/ryantanggr/"
@@ -44,6 +116,9 @@ export default function Home() {
                 asChild
                 variant="ghost"
                 className="hover:scale-110 transition duration-300"
+                data-aos="fade-left"
+                data-aos-delay="1600"
+                data-aos-duration="700"
               >
                 <a
                   href="https://github.com/Meji3011"
@@ -53,6 +128,22 @@ export default function Home() {
                   <Github className="h-5 w-5 shrink-0" />
                 </a>
               </Button>
+              <Button
+                asChild
+                variant="ghost"
+                className="hover:scale-110 transition duration-300"
+                data-aos="fade-left"
+                data-aos-delay="1600"
+                data-aos-duration="700"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1EvjdJWi8bK0CLcDor-zfyr5p7ZLai8HR/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SquareArrowOutUpRight className="h-5 w-5 shrink-0" />
+                </a>
+              </Button>
             </div>
           </div>
         </MaxWidthWrapper>
@@ -60,7 +151,13 @@ export default function Home() {
 
       <section id="About">
         <MaxWidthWrapper className="flex flex-col items-center mb-32 px-8">
-          <div className="flex flex-col w-full items-start">
+          <div
+            className="flex flex-col w-full items-start"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease-in"
+          >
             <h1 className="tracking-tight text-balance font-bold text-4xl">
               About me
             </h1>
@@ -195,7 +292,13 @@ export default function Home() {
 
       <section id="Projects">
         <MaxWidthWrapper className="flex flex-col items-center mt-32 mb-32 px-8">
-          <div className="flex flex-col w-full">
+          <div
+            className="flex flex-col w-full"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease-in"
+          >
             <h1 className="tracking-tight text-balance font-bold text-4xl">
               Projects
             </h1>
@@ -218,9 +321,15 @@ export default function Home() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>CaseCobra clone, an E-commerce website for designing and
-                      customizing your own smartphone case. </p>
-                      <p> Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn, Kinde, Stripe.</p>
+                      <p>
+                        CaseCobra clone, an E-commerce website for designing and
+                        customizing your own smartphone case.{" "}
+                      </p>
+                      <p>
+                        {" "}
+                        Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn,
+                        Kinde, Stripe.
+                      </p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
                       <Button
@@ -262,7 +371,9 @@ export default function Home() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                    <p>Ultraverse NFT World. A mock digital market for showcasing NFT tokens. 
+                      <p>
+                        Ultraverse NFT World. A mock digital market for
+                        showcasing NFT tokens.
                       </p>
                       <p>React, Axios, Firebase.</p>
                     </div>
@@ -386,6 +497,60 @@ export default function Home() {
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
             </Carousel>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+
+      <section id="Contact">
+        <MaxWidthWrapper className="flex flex-col items-center mt-16 mb-16 px-8">
+          <div
+            className="flex flex-col w-full items-center justify-center"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease-in"
+          >
+            <h1 className="tracking-tight text-balance font-bold text-4xl border-b-2 border-gray-200 w-auto">
+              Contact Me!
+            </h1>
+            <form
+              onSubmit={sendMessage}
+              className="flex flex-col w-[360px] sm:w-[500px] md:w-[600px] items-center justify-center gap-4 pt-4"
+              action=""
+            >
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                className="w-full rounded-sm p-1 text-slate-900"
+                ref={nameRef}
+              />
+              <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                className="w-full rounded-sm p-1 text-slate-900"
+                ref={emailRef}
+              />
+              <input
+                type="text"
+                name="from_subject"
+                placeholder="Your Subject"
+                className="w-full rounded-sm p-1 text-slate-900"
+                ref={subjectRef}
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                cols={25}
+                rows={7}
+                className="w-full rounded-sm h-[200px] p-1 text-slate-900"
+                ref={messageRef}
+              ></textarea>
+              <Button type="submit" variant="default">
+                <span className="text-xl p-2">Send Message</span>
+              </Button>
+            </form>
           </div>
         </MaxWidthWrapper>
       </section>

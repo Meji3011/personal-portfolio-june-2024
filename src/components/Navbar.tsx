@@ -16,12 +16,12 @@ const Navbar = async () => {
             })}
           >
             <span className="font-bold text-2xl">
-              Guangran (<span className="text-[#1F51FF]">Ryan</span>) Tang
+              Guangran (<span className="text-[#1f88ff]">Ryan</span>) Tang
             </span>
           </Link>
 
           <div className="h-full flex items-center space-x-4">
-            <>
+            <div className="hidden md:flex item-center space-x-4">
               <a
                 href="/#About"
                 className={buttonVariants({
@@ -29,7 +29,7 @@ const Navbar = async () => {
                   variant: "outline",
                 })}
               >
-                About
+                <span className="font-semibold">About</span>
               </a>
               <a
                 href="/#Projects"
@@ -38,29 +38,30 @@ const Navbar = async () => {
                   variant: "outline",
                 })}
               >
-                Projects
+                <span className="font-semibold">Projects</span>
               </a>
               <a
-                href="/#Projects"
+                href="/#Contact"
                 className={buttonVariants({
                   size: "sm",
                   variant: "outline",
                 })}
               >
-                Contact
+                <span className="font-semibold">Contact</span>
               </a>
               <a
-                href="/#Projects"
+                href="https://drive.google.com/file/d/1EvjdJWi8bK0CLcDor-zfyr5p7ZLai8HR/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={buttonVariants({
                   size: "sm",
                   variant: "outline",
                 })}
               >
-                Resume
+                <span className="font-bold">Resume</span>
               </a>
-              {/* Light and Dark mode toggle button goes here */}
-              <ThemeToggle />
-            </>
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </MaxWidthWrapper>
