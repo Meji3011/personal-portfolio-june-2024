@@ -255,7 +255,7 @@ export default function Home() {
                 <CarouselItem>
                   <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
                     <Image
-                      src="/UltraVerseSS.png"
+                      src="/UltraverseSS.png"
                       width={1649}
                       height={928}
                       alt="Picture of Ultraverse web app"
