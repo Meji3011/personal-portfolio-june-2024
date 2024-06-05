@@ -21,21 +21,24 @@ export default function Home() {
     AOS.init();
   }, []);
 
-  const emailService = process.env.EMAIL_SERVICE || "";
-  const emailTemplate = process.env.EMAIL_TEMPLATE || "";
-  const emailUser = process.env.EMAIL_USER || "";
+  const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || "";
+  const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || "";
+  const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || "";
 
-  const emailRef = useRef();
-  const subjectRef = useRef();
-  const nameRef = useRef();
-  const messageRef = useRef();
-  const sendMessage = (e) => {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  emailjs.init(emailUser);
+
+  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const templateParams = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      subject: subjectRef.current.value,
-      message: messageRef.current.value,
+      name: nameRef.current?.value || "",
+      email: emailRef.current?.value || "",
+      subject: subjectRef.current?.value || "",
+      message: messageRef.current?.value || "",
     };
     emailjs.send(emailService, emailTemplate, templateParams, emailUser).then(
       function (response) {
@@ -47,10 +50,10 @@ export default function Home() {
         console.log("FAILED...", error);
       }
     );
-    nameRef.current.value = "";
-    emailRef.current.value = "";
-    subjectRef.current.value = "";
-    messageRef.current.value = "";
+    if (nameRef.current) nameRef.current.value = "";
+    if (emailRef.current) emailRef.current.value = "";
+    if (subjectRef.current) subjectRef.current.value = "";
+    if (messageRef.current) messageRef.current.value = "";
   };
 
   return (
