@@ -315,7 +315,7 @@ export default function Home() {
             >
               <CarouselContent>
                 <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
                     <Image
                       src="/CaseCobraSS.png"
                       width={1649}
@@ -324,11 +324,14 @@ export default function Home() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>
-                        CaseCobra clone, an E-commerce website for designing and
+                      <p className="flex md:hidden text-sm">
+                        CaseCobra, design and customize your phone case.
+                      </p>
+                      <p className="hidden md:flex">
+                        CaseCobra, an E-commerce website for designing and
                         customizing your own smartphone case.{" "}
                       </p>
-                      <p>
+                      <p className="text-sm text-md">
                         {" "}
                         Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn,
                         Kinde, Stripe.
@@ -365,7 +368,7 @@ export default function Home() {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
                     <Image
                       src="/UltraverseSS.png"
                       width={1649}
@@ -411,7 +414,7 @@ export default function Home() {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
                     <Image
                       src="/TeslaSS.png"
                       width={1649}
@@ -420,8 +423,10 @@ export default function Home() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>Tesla Landing Page clone wiht login functionality.</p>
-                      <p> React, Firebase, Auth.</p>
+                      <p>
+                        Tesla clone with login functionality
+                      </p>
+                      <p>React, Firebase, Auth</p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
                       <Button
@@ -454,7 +459,7 @@ export default function Home() {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
                     <Image
                       src="/ACMESS.png"
                       width={1649}
