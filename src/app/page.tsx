@@ -1,113 +1,394 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Github, Linkedin, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <section id="Landing">
+        <MaxWidthWrapper className="mt-32 px-8 min-h-[90vh]">
+          <div className="flex flex-col items-start text-left gap-6 bg-slate-400 py-20 px-12 rounded-lg">
+            <p className="font-foreground-muted text-xl">Hi, My name is</p>
+            <h1 className="tracking-tight text-balance font-bold text-4xl sm:text-6xl">
+              Guangran (<span className="text-[#1F51FF]">Ryan</span>) Tang.
+            </h1>
+            <h2 className="tracking-tight text-balance font-bold text-2xl sm:text-4xl">
+              I'm a Freelance Frontend Developer.
+            </h2>
+            <p className="text-xl">
+              I love the challenge of turning beautiful concepts into reality.
+            </p>
+            <div className="flex justify-center items-center gap-2">
+              <Button
+                asChild
+                variant="ghost"
+                className="hover:scale-110 transition duration-300"
+              >
+                <a
+                  href="https://www.linkedin.com/in/ryantanggr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="ghost"
+                className="hover:scale-110 transition duration-300"
+              >
+                <a
+                  href="https://github.com/Meji3011"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-5 w-5 shrink-0" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section id="About">
+        <MaxWidthWrapper className="flex flex-col items-center mb-32 px-8">
+          <div className="flex flex-col w-full items-start">
+            <h1 className="tracking-tight text-balance font-bold text-4xl">
+              About me
+            </h1>
+            <div className="border-b border-gray-200 w-full"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <div className="col-span-2 flex flex-col gap-4">
+                <h2 className="tracking-tight text-primary text-lg">
+                  As an avid gamer, I've always been fascinated by the
+                  technology behind the scenes. During my pursuit of a physics
+                  degree at Reed College, I took Computer Science courses to
+                  improve my data analysis skills. However, it wasn't until
+                  after graduation, when exploring the digital projects of
+                  Virtual YouTubers, that I discovered the captivating world of
+                  front-end development.{" "}
+                  <a
+                    href="https://p5aholic.me/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1F51FF] hover:text-[#1F51FF]/90"
+                  >
+                    Keita Yamada's
+                  </a>{" "}
+                  sleek and responsive portfolio page was a true revelation,
+                  igniting my passion for this realm where code transforms into
+                  a visual feast for users. Inspired, I enrolled in the Frontend
+                  Simplified bootcamp in the Summer of 2023, equipping myself
+                  with the ability to design and implement web apps using the
+                  latest technologies, learning the best practices and how to
+                  enhance the user experience.
+                </h2>
+                <h2 className="tracking-tight text-primary text-lg">
+                  I'm always interested in building web apps with scalability
+                  and usability. My tech stack is shown below:
+                </h2>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                <div className="col-span-2 flex flex-wrap py-2 gap-4 justify-start">
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    HTML
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    CSS
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Javascript
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    React
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Next.JS
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Tailwind CSS
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Typescript
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Firebase
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    MongoDB
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Prisma
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Stripe
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
+                  >
+                    Kinde
+                  </Button>
+                </div>
+                <h2 className="tracking-tight text-primary text-lg">
+                  Whether it's crafting visually stunning interfaces or
+                  optimizing performance, I approach every project with a
+                  meticulous eye for detail and a commitment to delivering
+                  outstanding results.
+                </h2>
+              </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <div className="items-center mt-4 md:col-start-3 mx-auto">
+                <div>
+                  <Image
+                    src="/TangAboutMe.jpg"
+                    width={400}
+                    height={400}
+                    alt="Picture of Ryan for About me section."
+                  ></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section id="Projects">
+        <MaxWidthWrapper className="flex flex-col items-center mt-32 mb-32 px-8">
+          <div className="flex flex-col w-full">
+            <h1 className="tracking-tight text-balance font-bold text-4xl">
+              Projects
+            </h1>
+            <div className="border-b border-gray-200 w-full"></div>
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              className="px-0 md:mx-12"
+            >
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                    <Image
+                      src="/CaseCobraSS.png"
+                      width={1649}
+                      height={928}
+                      alt="Picture of CaseCobra web app"
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                      <p>CaseCobra clone, an E-commerce website for designing and
+                      customizing your own smartphone case. </p>
+                      <p> Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn, Kinde, Stripe.</p>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://casecobra-clone-grt.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SquareArrowOutUpRight className="h-5 w-5" />
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://github.com/Meji3011/casecobra-clone"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5 shrink-0" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                    <Image
+                      src="/UltraVerseSS.png"
+                      width={1649}
+                      height={928}
+                      alt="Picture of Ultraverse web app"
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                    <p>Ultraverse NFT World. A mock digital market for showcasing NFT tokens. 
+                      </p>
+                      <p>React, Axios, Firebase.</p>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://ryan-fes-virtual-internship.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SquareArrowOutUpRight className="h-5 w-5" />
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://github.com/Meji3011/Ryan-FES-virtual-internship"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5 shrink-0" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                    <Image
+                      src="/TeslaSS.png"
+                      width={1649}
+                      height={928}
+                      alt="Picture of Tesla web app"
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                      <p>Tesla Landing Page clone wiht login functionality.</p>
+                      <p> React, Firebase, Auth.</p>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://week-6-tesla-2021-clone.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SquareArrowOutUpRight className="h-5 w-5" />
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://github.com/Meji3011/Week-6-Tesla-2021-clone"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5 shrink-0" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-12">
+                    <Image
+                      src="/ACMESS.png"
+                      width={1649}
+                      height={928}
+                      alt="Picture of ACME web app"
+                    />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                      <p>ACME Dashboard for tracking transactions.</p>
+                      <p> Next.JS, React, Auth, Vercel DB</p>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://next-js-14-crashcourse.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SquareArrowOutUpRight className="h-5 w-5" />
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="hover:scale-110 transition duration-300"
+                      >
+                        <a
+                          href="https://github.com/Meji3011/Next.JS-14-crashcourse"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5 shrink-0" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+    </>
   );
 }
