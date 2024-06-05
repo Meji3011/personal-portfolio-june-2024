@@ -8,11 +8,16 @@ const Navbar = async () => {
     <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex h-[10vh] overflow-hidden">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}>
-            <span className="font-bold text-2xl">Guangran (<span className="text-[#1F51FF]">Ryan</span>) Tang</span>
+          <Link
+            href="/"
+            className={buttonVariants({
+              size: "sm",
+              variant: "ghost",
+            })}
+          >
+            <span className="font-bold text-2xl">
+              Guangran (<span className="text-[#1F51FF]">Ryan</span>) Tang
+            </span>
           </Link>
 
           <div className="h-full flex items-center space-x-4">
@@ -36,7 +41,7 @@ const Navbar = async () => {
                 Projects
               </a>
               <a
-                href="/"
+                href="/#Projects"
                 className={buttonVariants({
                   size: "sm",
                   variant: "outline",
@@ -45,7 +50,7 @@ const Navbar = async () => {
                 Contact
               </a>
               <a
-                href="/"
+                href="/#Projects"
                 className={buttonVariants({
                   size: "sm",
                   variant: "outline",

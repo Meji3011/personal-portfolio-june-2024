@@ -28,11 +28,11 @@ const ThemeToggle = () => {
   return (
     <button onClick={toggleTheme} className="theme-toggle">
       {theme === "light" ? (
-        <Button variant="outline">
+        <Button key="light" variant="outline">
           <SunIcon className="h-5 w-5 shrink-0" />
         </Button>
       ) : (
-        <Button variant="outline">
+        <Button key="dark" variant="outline">
           <MoonIcon className="h-5 w-5 shrink-0" />
         </Button>
       )}
