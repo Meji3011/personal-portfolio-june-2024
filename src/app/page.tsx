@@ -140,7 +140,7 @@ export default function Home() {
                 data-aos-duration="700"
               >
                 <a
-                  href="https://drive.google.com/file/d/1EvjdJWi8bK0CLcDor-zfyr5p7ZLai8HR/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1d2r65M93zqlwMSrYpPwrg4LTqGh9UjpJ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -286,8 +286,8 @@ export default function Home() {
                     width={1365}
                     height={2048}
                     layout="responsive"
-                    objectFit="contain"
                     className="rounded-lg"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>

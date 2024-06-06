@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="overflow-x-hidden" lang="en">
       <body className={raleway.className}>
         <Navbar />
         <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)]">
-          <div className="flex-1 flex flex-col h-full">{children}</div>
+          <div className="flex-1 flex flex-col h-full overflow-x-hidden">{children}</div>
           <Footer />
         </main>
       </body>

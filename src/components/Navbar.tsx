@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = async () => {
   return (
-    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex h-[10vh] min-h-20 overflow-hidden">
+    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex h-[10vh] min-h-20">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between p-4 sm:p-0">
           <Link
@@ -50,7 +50,7 @@ const Navbar = async () => {
                 <span className="font-semibold">Contact</span>
               </a>
               <a
-                href="https://drive.google.com/file/d/1EvjdJWi8bK0CLcDor-zfyr5p7ZLai8HR/view?usp=sharing"
+                href="https://drive.google.com/file/d/1d2r65M93zqlwMSrYpPwrg4LTqGh9UjpJ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonVariants({
