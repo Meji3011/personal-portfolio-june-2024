@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       <section id="About">
-        <MaxWidthWrapper className="flex flex-col items-center mb-32 px-8">
+        <MaxWidthWrapper className="flex flex-col items-center mt-32 mb-32 px-8">
           <div
             className="flex flex-col w-full items-start"
             data-aos="fade-left"
@@ -511,7 +511,7 @@ export default function Home() {
       </section>
 
       <section id="Contact">
-        <MaxWidthWrapper className="flex flex-col items-center mt-16 mb-16 px-8">
+        <MaxWidthWrapper className="flex flex-col items-center mb-16 px-8">
           <div
             className="flex flex-col w-full items-center justify-center"
             data-aos="fade-left"
