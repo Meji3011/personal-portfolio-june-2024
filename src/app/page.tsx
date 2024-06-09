@@ -21,9 +21,9 @@ export default function Home() {
     AOS.init();
   }, []);
 
-  const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || "";
-  const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || "";
-  const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || "";
+  const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || process.env.EMAIL_SERVICE || "";
+  const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || process.env.EMAIL_TEMPLATE || "";
+  const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || process.env.EMAIL_USER || "";
 
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
       <section id="Landing">
-        <MaxWidthWrapper className="mt-32 px-8 min-h-[90vh]">
+        <MaxWidthWrapper className="px-8 min-h-[calc(100vh-81px)] flex flex-col justify-center">
           <div
             className="flex flex-col items-start text-left gap-6 bg-gradient-to-r from-slate-600 to bg-slate-300 text-clip py-20 px-12 rounded-lg"
             data-aos="zoom-in"
