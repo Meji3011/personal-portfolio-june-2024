@@ -21,9 +21,9 @@ export default function Home() {
     AOS.init();
   }, []);
 
-  const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || process.env.EMAIL_SERVICE || "";
-  const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || process.env.EMAIL_TEMPLATE || "";
-  const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || process.env.EMAIL_USER || "";
+  const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || "";
+  const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || "";
+  const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || "";
 
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
