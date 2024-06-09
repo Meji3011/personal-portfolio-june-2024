@@ -50,7 +50,7 @@ const Navbar = async () => {
                 <span className="font-semibold">Contact</span>
               </a>
               <a
-                href="https://drive.google.com/file/d/1d2r65M93zqlwMSrYpPwrg4LTqGh9UjpJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1h_hzE48wLgOJmjOZ5DFdQue6H177rW9o/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonVariants({
