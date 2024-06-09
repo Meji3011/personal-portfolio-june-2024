@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = async () => {
   return (
-    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 backdrop-blur-sm transition-all flex">
+    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 transition-all flex backdrop-blur-sm">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between p-4 sm:p-0">
           <Link
