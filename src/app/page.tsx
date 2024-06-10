@@ -232,6 +232,13 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Redux"
+                  >
+                    Redux
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="hover:scale-110 transition duration-300 cursor-default"
                     aria-label="Next.JS"
                   >
                     Next.JS
