@@ -15,6 +15,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
   useEffect(() => {
@@ -61,7 +62,7 @@ export default function Home() {
       <section id="Landing">
         <MaxWidthWrapper className="px-8 min-h-[calc(100vh-81px)] flex flex-col justify-center">
           <div
-            className="flex flex-col items-start text-left gap-6 bg-gradient-to-r from-slate-600 to bg-slate-300 text-clip py-20 px-12 rounded-lg"
+            className="flex flex-col items-start text-left gap-6 bg-gradient-to-r from-stone-500 to bg-slate-500 text-clip py-20 px-12 rounded-lg select-none"
             data-aos="zoom-in"
             data-aos-delay="300"
             data-aos-duration="700"
@@ -80,7 +81,7 @@ export default function Home() {
               data-aos-delay="1000"
               data-aos-duration="700"
             >
-              Guangran (<span className="text-[#1f50ff]">Ryan</span>) Tang.
+              Guangran (<span className="text-[#1f88ff]">Ryan</span>) Tang.
             </h1>
             <h2
               className="tracking-tight text-balance font-bold text-2xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200"
@@ -109,6 +110,7 @@ export default function Home() {
               >
                 <a
                   href="https://www.linkedin.com/in/ryantanggr/"
+                  aria-label="link to open Linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -125,6 +127,7 @@ export default function Home() {
               >
                 <a
                   href="https://github.com/Meji3011"
+                  aria-label="link to open github"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -140,7 +143,8 @@ export default function Home() {
                 data-aos-duration="700"
               >
                 <a
-                  href="https://drive.google.com/file/d/1d2r65M93zqlwMSrYpPwrg4LTqGh9UjpJ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1h_hzE48wLgOJmjOZ5DFdQue6H177rW9o/view?usp=sharing"
+                  aria-label="link to open resume"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -155,7 +159,7 @@ export default function Home() {
       <section id="About">
         <MaxWidthWrapper className="flex flex-col items-center mt-32 mb-32 px-8">
           <div
-            className="flex flex-col w-full items-start"
+            className="flex flex-col w-full items-start select-none"
             data-aos="fade-left"
             data-aos-delay="200"
             data-aos-duration="700"
@@ -200,72 +204,84 @@ export default function Home() {
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="HTML"
                   >
                     HTML
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="CSS"
                   >
                     CSS
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Javscript"
                   >
                     Javascript
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="React"
                   >
                     React
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Next.JS"
                   >
                     Next.JS
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Tailwind CSS"
                   >
                     Tailwind CSS
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Typescript"
                   >
                     Typescript
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Firebase"
                   >
                     Firebase
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="MongoDB"
                   >
                     MongoDB
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Prisma"
                   >
                     Prisma
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Stripe"
                   >
                     Stripe
                   </Button>
                   <Button
                     variant="outline"
                     className="hover:scale-110 transition duration-300 cursor-default"
+                    aria-label="Kinde"
                   >
                     Kinde
                   </Button>
@@ -299,7 +315,7 @@ export default function Home() {
       <section id="Projects">
         <MaxWidthWrapper className="flex flex-col items-center mt-32 mb-32 px-8">
           <div
-            className="flex flex-col w-full"
+            className="flex flex-col w-full select-none"
             data-aos="fade-left"
             data-aos-delay="200"
             data-aos-duration="700"
@@ -348,6 +364,7 @@ export default function Home() {
                       >
                         <a
                           href="https://casecobra-clone-grt.vercel.app/"
+                          aria-label="link to open casecobra e-commerce website clone"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -361,6 +378,7 @@ export default function Home() {
                       >
                         <a
                           href="https://github.com/Meji3011/casecobra-clone"
+                          aria-label="link to open github repo of casecobra-clone"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -394,6 +412,7 @@ export default function Home() {
                       >
                         <a
                           href="https://ryan-fes-virtual-internship.vercel.app/"
+                          aria-label="link to open ultraverse NFT marketplace"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -407,6 +426,7 @@ export default function Home() {
                       >
                         <a
                           href="https://github.com/Meji3011/Ryan-FES-virtual-internship"
+                          aria-label="link to open github repo of ultraverse NFT marketplace"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -437,6 +457,7 @@ export default function Home() {
                       >
                         <a
                           href="https://week-6-tesla-2021-clone.vercel.app/"
+                          aria-label="link to open tesla clone"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -450,6 +471,7 @@ export default function Home() {
                       >
                         <a
                           href="https://github.com/Meji3011/Week-6-Tesla-2021-clone"
+                          aria-label="link to open github repo of tesla clone"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -480,6 +502,7 @@ export default function Home() {
                       >
                         <a
                           href="https://next-js-14-crashcourse.vercel.app/"
+                          aria-label="link to open ACME dashboard, an app created with Next.js 14"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -493,6 +516,7 @@ export default function Home() {
                       >
                         <a
                           href="https://github.com/Meji3011/Next.JS-14-crashcourse"
+                          aria-label="link to open github repo of ACME dashboard"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -513,7 +537,7 @@ export default function Home() {
       <section id="Contact">
         <MaxWidthWrapper className="flex flex-col items-center mb-16 px-8">
           <div
-            className="flex flex-col w-full items-center justify-center"
+            className="flex flex-col w-full items-center justify-center select-none"
             data-aos="fade-left"
             data-aos-delay="200"
             data-aos-duration="700"

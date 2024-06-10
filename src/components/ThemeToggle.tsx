@@ -26,17 +26,17 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="theme-toggle">
+    <div onClick={toggleTheme} className="theme-toggle">
       {theme === "light" ? (
-        <Button key="light" variant="outline">
+        <Button key="light" variant="outline" aria-label="theme toggle">
           <SunIcon className="h-5 w-5 shrink-0" />
         </Button>
       ) : (
-        <Button key="dark" variant="outline">
+        <Button key="dark" variant="outline" aria-label="theme toggle">
           <MoonIcon className="h-5 w-5 shrink-0" />
         </Button>
       )}
-    </button>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <footer className="relative h-32 overflow-x:hidden">
+    <footer className="relative h-32 select-none">
       <MaxWidthWrapper>
         <div className="border-t border-gray-200"></div>
         <div className="h-full flex flex-col justify-center items-center">
@@ -12,6 +12,7 @@ const Footer = () => {
             <Button asChild variant="outline">
               <a
                 href="https://www.linkedin.com/in/ryantanggr/"
+                aria-label="link to open Linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -21,6 +22,7 @@ const Footer = () => {
             <Button asChild variant="outline">
               <a
                 href="https://github.com/Meji3011"
+                aria-label="link to open github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
