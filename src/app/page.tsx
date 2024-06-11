@@ -15,11 +15,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ once: true });
   }, []);
 
   const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || "";
@@ -89,7 +88,7 @@ export default function Home() {
               data-aos-delay="1200"
               data-aos-duration="700"
             >
-              I'm a Freelance Frontend Developer.
+              I'm a Full-Stack Developer.
             </h2>
             <p
               className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-100"
@@ -332,216 +331,201 @@ export default function Home() {
               Projects
             </h1>
             <div className="border-b border-gray-200 w-full"></div>
-            <Carousel
-              opts={{
-                align: "center",
-                loop: true,
-              }}
-              className="px-0 md:mx-12"
-            >
-              <CarouselContent>
-                <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
-                    <Image
-                      src="/CaseCobraSS.png"
-                      width={1649}
-                      height={928}
-                      alt="Picture of CaseCobra web app"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p className="flex md:hidden text-sm">
-                        CaseCobra, design and customize your phone case.
-                      </p>
-                      <p className="hidden md:flex">
-                        CaseCobra, an E-commerce website for designing and
-                        customizing your own smartphone case.{" "}
-                      </p>
-                      <p className="text-sm text-md">
-                        {" "}
-                        Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn,
-                        Kinde, Stripe.
-                      </p>
-                    </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://casecobra-clone-grt.vercel.app/"
-                          aria-label="link to open casecobra e-commerce website clone"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <SquareArrowOutUpRight className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://github.com/Meji3011/casecobra-clone"
-                          aria-label="link to open github repo of casecobra-clone"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-5 w-5 shrink-0" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
-                    <Image
-                      src="/UltraverseSS.png"
-                      width={1649}
-                      height={928}
-                      alt="Picture of Ultraverse web app"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>
-                        Ultraverse NFT World. A mock digital market for
-                        showcasing NFT tokens.
-                      </p>
-                      <p>React, Axios, Firebase.</p>
-                    </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://ryan-fes-virtual-internship.vercel.app/"
-                          aria-label="link to open ultraverse NFT marketplace"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <SquareArrowOutUpRight className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://github.com/Meji3011/Ryan-FES-virtual-internship"
-                          aria-label="link to open github repo of ultraverse NFT marketplace"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-5 w-5 shrink-0" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
-                    <Image
-                      src="/TeslaSS.png"
-                      width={1649}
-                      height={928}
-                      alt="Picture of Tesla web app"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>Tesla clone with login functionality</p>
-                      <p>React, Firebase, Auth</p>
-                    </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://week-6-tesla-2021-clone.vercel.app/"
-                          aria-label="link to open tesla clone"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <SquareArrowOutUpRight className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://github.com/Meji3011/Week-6-Tesla-2021-clone"
-                          aria-label="link to open github repo of tesla clone"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-5 w-5 shrink-0" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 sm:p-6 md:p-12">
-                    <Image
-                      src="/ACMESS.png"
-                      width={1649}
-                      height={928}
-                      alt="Picture of ACME web app"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
-                      <p>ACME Dashboard for tracking transactions.</p>
-                      <p> Next.JS, React, Auth, Vercel DB</p>
-                    </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://next-js-14-crashcourse.vercel.app/"
-                          aria-label="link to open ACME dashboard, an app created with Next.js 14"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <SquareArrowOutUpRight className="h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="ghost"
-                        className="hover:scale-110 transition duration-300"
-                      >
-                        <a
-                          href="https://github.com/Meji3011/Next.JS-14-crashcourse"
-                          aria-label="link to open github repo of ACME dashboard"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-5 w-5 shrink-0" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+              <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 md:p-4">
+                <Image
+                  src="/CaseCobraSS.png"
+                  width={1649}
+                  height={928}
+                  alt="Picture of CaseCobra web app"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                  <p className="flex md:hidden text-sm">
+                    CaseCobra, design and customize your phone case.
+                  </p>
+                  <p className="hidden md:flex">
+                    CaseCobra, an E-commerce website for designing and
+                    customizing your own smartphone case.{" "}
+                  </p>
+                  <p className="text-sm text-md">
+                    {" "}
+                    Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn,
+                    Kinde, Stripe.
+                  </p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://casecobra-clone-grt.vercel.app/"
+                      aria-label="link to open casecobra e-commerce website clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SquareArrowOutUpRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://github.com/Meji3011/casecobra-clone"
+                      aria-label="link to open github repo of casecobra-clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-5 w-5 shrink-0" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 md:p-4">
+                <Image
+                  src="/UltraverseSS.png"
+                  width={1649}
+                  height={928}
+                  alt="Picture of Ultraverse web app"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                  <p>
+                    Ultraverse NFT World. A mock digital market for showcasing
+                    NFT tokens.
+                  </p>
+                  <p>React, Axios, Firebase.</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://ryan-fes-virtual-internship.vercel.app/"
+                      aria-label="link to open ultraverse NFT marketplace"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SquareArrowOutUpRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://github.com/Meji3011/Ryan-FES-virtual-internship"
+                      aria-label="link to open github repo of ultraverse NFT marketplace"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-5 w-5 shrink-0" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 md:p-4">
+                <Image
+                  src="/TeslaSS.png"
+                  width={1649}
+                  height={928}
+                  alt="Picture of Tesla web app"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                  <p>Tesla clone with login functionality</p>
+                  <p>React, Firebase, Auth</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://week-6-tesla-2021-clone.vercel.app/"
+                      aria-label="link to open tesla clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SquareArrowOutUpRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://github.com/Meji3011/Week-6-Tesla-2021-clone"
+                      aria-label="link to open github repo of tesla clone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-5 w-5 shrink-0" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="group relative flex items-center justify-center flex-col my-12 border-gray-200 border-[2px] rounded-md p-2 md:p-4">
+                <Image
+                  src="/ACMESS.png"
+                  width={1649}
+                  height={928}
+                  alt="Picture of ACME web app"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
+                  <p>ACME Dashboard for tracking transactions.</p>
+                  <p> Next.JS, React, Auth, Vercel DB</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://next-js-14-crashcourse.vercel.app/"
+                      aria-label="link to open ACME dashboard, an app created with Next.js 14"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SquareArrowOutUpRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="hover:scale-110 transition duration-300"
+                  >
+                    <a
+                      href="https://github.com/Meji3011/Next.JS-14-crashcourse"
+                      aria-label="link to open github repo of ACME dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-5 w-5 shrink-0" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
 
-      <section id="Contact">
+      <section id="Contact" className="md:hidden">
         <MaxWidthWrapper className="flex flex-col items-center mb-16 px-8">
           <div
             className="flex flex-col w-full items-center justify-center select-none"
@@ -564,6 +548,7 @@ export default function Home() {
                 placeholder="Your Name"
                 className="w-full rounded-sm p-1 text-slate-900"
                 ref={nameRef}
+                required
               />
               <input
                 type="email"
@@ -571,6 +556,7 @@ export default function Home() {
                 placeholder="Your Email"
                 className="w-full rounded-sm p-1 text-slate-900"
                 ref={emailRef}
+                required
               />
               <input
                 type="text"
@@ -578,6 +564,7 @@ export default function Home() {
                 placeholder="Your Subject"
                 className="w-full rounded-sm p-1 text-slate-900"
                 ref={subjectRef}
+                required
               />
               <textarea
                 name="message"
@@ -586,6 +573,7 @@ export default function Home() {
                 rows={7}
                 className="w-full rounded-sm h-[200px] p-1 text-slate-900"
                 ref={messageRef}
+                required
               ></textarea>
               <Button type="submit" variant="default">
                 <span className="text-xl p-2">Send Message</span>
