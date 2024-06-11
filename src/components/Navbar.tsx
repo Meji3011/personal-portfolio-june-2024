@@ -66,7 +66,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 transition-all flex backdrop-blur-sm select-none">
+    <nav className="sticky z-[100] inset-x-0 top-0 w-full border-b border-gray-200 transition-all flex select-none bg-inherit">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between p-4 sm:p-0">
           <a
