@@ -397,7 +397,7 @@ export default function Home() {
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
                   <p>
                     Ultraverse NFT World. A mock digital market for showcasing
-                    NFT tokens.
+                    NFTs.
                   </p>
                   <p>React, Axios, Firebase.</p>
                 </div>
