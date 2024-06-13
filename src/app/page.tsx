@@ -15,6 +15,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Home() {
   useEffect(() => {
@@ -200,97 +205,271 @@ export default function Home() {
                 </h2>
 
                 <div className="col-span-2 flex flex-wrap py-2 gap-4 justify-start">
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="HTML"
-                  >
-                    HTML
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="CSS"
-                  >
-                    CSS
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Javscript"
-                  >
-                    Javascript
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="React"
-                  >
-                    React
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Redux"
-                  >
-                    Redux
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Next.JS"
-                  >
-                    Next.JS
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Tailwind CSS"
-                  >
-                    Tailwind CSS
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Typescript"
-                  >
-                    Typescript
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Firebase"
-                  >
-                    Firebase
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="MongoDB"
-                  >
-                    MongoDB
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Prisma"
-                  >
-                    Prisma
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Stripe"
-                  >
-                    Stripe
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="hover:scale-110 transition duration-300 cursor-default"
-                    aria-label="Kinde"
-                  >
-                    Kinde
-                  </Button>
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="HTML"
+                      >
+                        HTML
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/html-icon.svg"
+                        className="h-16 w-16"
+                        alt="html icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="CSS"
+                      >
+                        CSS
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/css-icon.svg"
+                        className="h-16 w-16"
+                        alt="css icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Javscript"
+                      >
+                        Javascript
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/js-icon.svg"
+                        className="h-16 w-16"
+                        alt="js icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="React"
+                      >
+                        React
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/react-icon.svg"
+                        className="h-16 w-16"
+                        alt="React icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Redux"
+                      >
+                        Redux
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/redux-icon.svg"
+                        className="h-16 w-16"
+                        alt="Redux icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Next.JS"
+                      >
+                        Next.JS 14
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/next-js-icon.svg"
+                        className="h-16 w-16"
+                        alt="Next.js icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Tailwind CSS"
+                      >
+                        Tailwind CSS
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/tailwind-css-icon.svg"
+                        className="h-16 w-16"
+                        alt="Tailwind CSS icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Typescript"
+                      >
+                        Typescript
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/typescript-icon.svg"
+                        className="h-16 w-16"
+                        alt="Typescript icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Firebase"
+                      >
+                        Firebase
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/firebase-icon.svg"
+                        className="h-16 w-16"
+                        alt="Firebase icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="MongoDB"
+                      >
+                        MongoDB
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/mongodb-icon.svg"
+                        className="h-16 w-16"
+                        alt="Mongo DB icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="MongoDB"
+                      >
+                        MongoDB
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/mongodb-icon.svg"
+                        className="h-16 w-16"
+                        alt="Mongo DB icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Prisma"
+                      >
+                        Prisma
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/prisma-icon.svg"
+                        className="h-16 w-16"
+                        alt="Prisma icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Stripe"
+                      >
+                        Stripe
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/stripe-icon.svg"
+                        className="h-16 w-16"
+                        alt="Stripe icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  <HoverCard openDelay={300}>
+                    <HoverCardTrigger>
+                      <Button
+                        variant="outline"
+                        className="hover:scale-110 transition duration-300 cursor-default"
+                        aria-label="Kinde"
+                      >
+                        Kinde
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
+                      <img
+                        src="/kinde-icon.jpg"
+                        className="h-16 w-16"
+                        alt="Kinde icon"
+                      ></img>
+                    </HoverCardContent>
+                  </HoverCard>
                 </div>
                 <h2 className="tracking-tight text-primary text-lg">
                   Whether it's crafting visually stunning interfaces or
