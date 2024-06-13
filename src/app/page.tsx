@@ -142,7 +142,7 @@ export default function Home() {
                 data-aos-duration="700"
               >
                 <a
-                  href="https://drive.google.com/file/d/1h_hzE48wLgOJmjOZ5DFdQue6H177rW9o/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1aNgxEhFCLMTPcDad1Fiei6zK1WuNU7m5/view?usp=sharing"
                   aria-label="link to open resume"
                   target="_blank"
                   rel="noopener noreferrer"
