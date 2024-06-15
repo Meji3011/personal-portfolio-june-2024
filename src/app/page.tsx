@@ -400,25 +400,6 @@ export default function Home() {
                       <Button
                         variant="outline"
                         className="hover:scale-110 transition duration-300 cursor-default"
-                        aria-label="MongoDB"
-                      >
-                        MongoDB
-                      </Button>
-                    </HoverCardTrigger>
-                    <HoverCardContent className="flex flex-col items-center justify-center h-20 w-20 p-2">
-                      <img
-                        src="/mongodb-icon.svg"
-                        className="h-16 w-16"
-                        alt="Mongo DB icon"
-                      ></img>
-                    </HoverCardContent>
-                  </HoverCard>
-
-                  <HoverCard openDelay={300}>
-                    <HoverCardTrigger>
-                      <Button
-                        variant="outline"
-                        className="hover:scale-110 transition duration-300 cursor-default"
                         aria-label="Prisma"
                       >
                         Prisma
