@@ -103,7 +103,19 @@ const Navbar = () => {
               >
                 <span className="font-semibold">Projects</span>
               </a>
-              <Drawer onClose={handleDrawerClose}>
+              <a
+                href="/#Contact"
+                aria-label="link to scroll to contact section"
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+              >
+                <span className="font-semibold">Contact</span>
+              </a>
+
+              {/* Not using this drawer component */}
+              {/* <Drawer onClose={handleDrawerClose}>
                 <DrawerTrigger
                   className={buttonVariants({
                     size: "sm",
@@ -166,7 +178,7 @@ const Navbar = () => {
                     </form>
                   </DrawerDescription>
                 </DrawerContent>
-              </Drawer>
+              </Drawer> */}
               <a
                 href="https://drive.google.com/file/d/1aNgxEhFCLMTPcDad1Fiei6zK1WuNU7m5/view?usp=sharing"
                 aria-label="link to open resume in new tab"

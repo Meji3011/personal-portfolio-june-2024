@@ -2,18 +2,11 @@
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Github, Linkedin, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   HoverCard,
@@ -26,6 +19,8 @@ export default function Home() {
     AOS.init({ once: true });
   }, []);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const emailService = process.env.NEXT_PUBLIC_EMAIL_SERVICE || "";
   const emailTemplate = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE || "";
   const emailUser = process.env.NEXT_PUBLIC_EMAIL_USER || "";
@@ -37,28 +32,36 @@ export default function Home() {
 
   emailjs.init(emailUser);
 
-  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const templateParams = {
-      name: nameRef.current?.value || "",
-      email: emailRef.current?.value || "",
-      subject: subjectRef.current?.value || "",
-      message: messageRef.current?.value || "",
-    };
-    emailjs.send(emailService, emailTemplate, templateParams, emailUser).then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Thanks, message sent successfully");
-      },
-      function (error) {
-        alert("OOPs something went wrong... Try again later");
-        console.log("FAILED...", error);
-      }
-    );
-    if (nameRef.current) nameRef.current.value = "";
-    if (emailRef.current) emailRef.current.value = "";
-    if (subjectRef.current) subjectRef.current.value = "";
-    if (messageRef.current) messageRef.current.value = "";
+    setIsLoading(true); // Set loading state to true
+
+    try {
+      const templateParams = {
+        name: nameRef.current?.value || "",
+        email: emailRef.current?.value || "",
+        subject: subjectRef.current?.value || "",
+        message: messageRef.current?.value || "",
+      };
+      await emailjs.send(
+        emailService,
+        emailTemplate,
+        templateParams,
+        emailUser
+      );
+      alert("Thanks, message sent successfully");
+
+      // Reset form fields after successful submission
+      if (nameRef.current) nameRef.current.value = "";
+      if (emailRef.current) emailRef.current.value = "";
+      if (subjectRef.current) subjectRef.current.value = "";
+      if (messageRef.current) messageRef.current.value = "";
+    } catch (error) {
+      alert("OOPs something went wrong... Try again later");
+      console.log("FAILED...", error);
+    } finally {
+      setIsLoading(false); // Set loading state to false
+    }
   };
 
   return (
@@ -138,10 +141,10 @@ export default function Home() {
                   <Github className="h-5 w-5 shrink-0" />
                 </a>
               </Button>
+              
               <Button
                 asChild
                 variant="ghost"
-                className="hover:scale-110 transition duration-300"
                 data-aos="fade-left"
                 data-aos-delay="1600"
                 data-aos-duration="700"
@@ -152,7 +155,11 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <SquareArrowOutUpRight className="h-5 w-5 shrink-0" />
+                  <img
+                    src="/pdf-icon.svg"
+                    className="h-5 w-5 shrink-0"
+                    alt="pdf"
+                  ></img>
                 </a>
               </Button>
             </div>
@@ -508,7 +515,7 @@ export default function Home() {
                     CaseCobra, an E-commerce website for designing and
                     customizing your own smartphone case.{" "}
                   </p>
-                  <p className="text-sm text-md">
+                  <p className="text-xs md:text-sm">
                     {" "}
                     Next.JS, React, TailwindCSS, Typescipt, Prisma, Shadcn,
                     Kinde, Stripe.
@@ -559,7 +566,7 @@ export default function Home() {
                     Ultraverse NFT World. A mock digital market for showcasing
                     NFTs.
                   </p>
-                  <p>React, Axios, Firebase.</p>
+                  <p className="text-xs md:text-sm">React, Axios, Firebase.</p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
                   <Button
@@ -603,7 +610,9 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
                   <p>Tesla clone with login functionality</p>
-                  <p>React, Firebase, Redux, Auth</p>
+                  <p className="text-xs md:text-sm">
+                    React, Firebase, Redux, Auth
+                  </p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
                   <Button
@@ -647,7 +656,10 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-full bg-[#1C1D25] opacity-0 group-hover:opacity-70 transition-opacity duration-700 ease rounded-sm"></div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-1/2 group-hover:-translate-y-1/2 top-3/4 text-md sm:text-xl text-white">
                   <p>ACME Dashboard for tracking transactions.</p>
-                  <p> Next.JS, React, Auth, Redux, Vercel DB</p>
+                  <p className="text-xs md:text-sm">
+                    {" "}
+                    Next.JS, React, Auth, Redux, Vercel DB
+                  </p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 max-w-[550px] w-full px-2 text-center transition-all duration-700 ease opacity-0 group-hover:opacity-100 group-hover:top-3/4 group-hover:-translate-y-1/2 top-3/4 text-white flex flex-row items-center justify-center gap-4">
                   <Button
@@ -685,7 +697,7 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
 
-      <section id="Contact" className="md:hidden">
+      <section id="Contact">
         <MaxWidthWrapper className="flex flex-col items-center mb-16 px-8">
           <div
             className="flex flex-col w-full items-center justify-center select-none"
@@ -735,8 +747,17 @@ export default function Home() {
                 ref={messageRef}
                 required
               ></textarea>
-              <Button type="submit" variant="default">
-                <span className="text-xl p-2">Send Message</span>
+              <Button
+                type="submit"
+                variant="default"
+                disabled={isLoading}
+                className={isLoading ? "opacity-50 cursor-not-allowed" : ""}
+              >
+                {isLoading ? (
+                  <span className="text-xl p-2">Sending...</span>
+                ) : (
+                  <span className="text-xl p-2">Send Message</span>
+                )}
               </Button>
             </form>
           </div>
