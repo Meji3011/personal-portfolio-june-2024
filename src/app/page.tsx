@@ -2,7 +2,7 @@
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, SquareArrowOutUpRight } from "lucide-react";
+import { Github, Linkedin, Paperclip, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -145,6 +145,7 @@ export default function Home() {
               <Button
                 asChild
                 variant="ghost"
+                className="hover:scale-110 transition duration-300"
                 data-aos="fade-left"
                 data-aos-delay="1600"
                 data-aos-duration="700"
@@ -155,11 +156,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="/pdf-icon.svg"
-                    className="h-5 w-5 shrink-0"
-                    alt="pdf"
-                  ></img>
+                  <Paperclip className="h-5 w-5 shrink-0" />
                 </a>
               </Button>
             </div>
