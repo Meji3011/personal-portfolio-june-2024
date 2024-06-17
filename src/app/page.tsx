@@ -202,7 +202,7 @@ export default function Home() {
                   </a>{" "}
                   sleek and responsive portfolio page was a true revelation,
                   igniting my passion for this realm where code transforms into
-                  a interactive platform for users. Inspired, I enrolled in the
+                  an interactive platform for users. Inspired, I enrolled in the
                   Frontend Simplified bootcamp in the Summer of 2023, equipping
                   myself with the ability to design and implement web apps using
                   the latest technologies, learning the best practices and how
