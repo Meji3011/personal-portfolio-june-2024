@@ -2,7 +2,12 @@
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Paperclip, SquareArrowOutUpRight } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Paperclip,
+  SquareArrowOutUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -141,7 +146,7 @@ export default function Home() {
                   <Github className="h-5 w-5 shrink-0" />
                 </a>
               </Button>
-              
+
               <Button
                 asChild
                 variant="ghost"
@@ -185,8 +190,8 @@ export default function Home() {
                   degree at Reed College, I took Computer Science courses to
                   improve my data analysis skills. However, it wasn't until
                   after graduation, when exploring the digital projects of
-                  Virtual YouTubers, that I discovered the captivating world of
-                  front-end development.{" "}
+                  various entertainment firms, that I discovered the captivating
+                  world of front-end development.{" "}
                   <a
                     href="https://p5aholic.me/"
                     target="_blank"
@@ -197,11 +202,11 @@ export default function Home() {
                   </a>{" "}
                   sleek and responsive portfolio page was a true revelation,
                   igniting my passion for this realm where code transforms into
-                  a visual feast for users. Inspired, I enrolled in the Frontend
-                  Simplified bootcamp in the Summer of 2023, equipping myself
-                  with the ability to design and implement web apps using the
-                  latest technologies, learning the best practices and how to
-                  enhance the user experience.
+                  a interactive platform for users. Inspired, I enrolled in the
+                  Frontend Simplified bootcamp in the Summer of 2023, equipping
+                  myself with the ability to design and implement web apps using
+                  the latest technologies, learning the best practices and how
+                  to enhance the user experience.
                 </h2>
                 <h2 className="tracking-tight text-primary text-lg">
                   I'm always interested in building web apps with scalability
