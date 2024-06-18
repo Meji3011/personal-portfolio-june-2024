@@ -114,7 +114,7 @@ const Navbar = () => {
                 <span className="font-semibold">Contact</span>
               </a>
 
-              {/* Not using this drawer component */}
+              {/* Not using this drawer component, but keep for future reference */}
               {/* <Drawer onClose={handleDrawerClose}>
                 <DrawerTrigger
                   className={buttonVariants({
